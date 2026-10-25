@@ -3,6 +3,7 @@
  * page, checks that every asset resolves under the repository path without
  * console errors, and plays a few moves of offline practice.
  *   LIVE_URL=https://umairzia.github.io/Blokus-Team-AI/ npm run test:e2e:live
+ * With EXPECT_ONLINE=1 it also requires online play to be configured.
  */
 
 import { expect, test } from '@playwright/test';
@@ -29,6 +30,12 @@ test('the published site loads, its assets resolve and a practice game runs', as
   expect(res?.status()).toBe(200);
   await expect(page).toHaveTitle(/Blokus Team AI/);
   await expect(page.locator('#screen-home')).toBeVisible();
+  // EXPECT_ONLINE=1 (set by CI when the Firebase variables exist): the build
+  // must have picked up a valid config and offer online rooms, not the setup notice.
+  if (process.env.EXPECT_ONLINE === '1') {
+    await expect(page.locator('#btn-create')).toBeVisible();
+    await expect(page.locator('#online-setup')).toBeHidden();
+  }
   const path = new URL(baseURL!).pathname;
   expect(assets.some((u) => new URL(u).pathname.startsWith(`${path}assets/index-`))).toBe(true);
   for (const u of assets) expect(new URL(u).pathname.startsWith(path)).toBe(true);

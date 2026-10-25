@@ -9,6 +9,8 @@ import { expect, test } from '@playwright/test';
 import { LAPTOP, PHONE, boardString, createRoom, joinByLink, openPlayer, playSuggested, waitTurn } from '../support/players';
 
 test.skip(!process.env.LIVE_ONLINE, 'set LIVE_ONLINE=1 to run the online check against the live Firebase project');
+// No retries: a retry would create another room.
+test.describe.configure({ retries: 0 });
 
 test('two browsers play one round online and then close their own test room', async ({ browser }) => {
   const A = await openPlayer(browser, { device: LAPTOP });

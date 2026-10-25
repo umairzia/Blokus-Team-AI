@@ -9,6 +9,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      online_check:
+        description: 'After deploying, play one round online on the live site (two fresh browsers, a new room that is deleted afterwards)'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -95,6 +100,9 @@ jobs:
           npx vite preview --port 4180 --strictPort &
           for i in $(seq 1 30); do curl -fsS http://127.0.0.1:4180/Blokus-Team-AI/ > /dev/null && break; sleep 1; done
           LIVE_URL=http://127.0.0.1:4180/Blokus-Team-AI/ npm run test:e2e:live
+        env:
+          # With Firebase variables set, the build must offer online rooms.
+          EXPECT_ONLINE: ${{ vars.VITE_FIREBASE_PROJECT_ID != '' && '1' || '' }}
       - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
       - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4.0.0
         with:
@@ -145,3 +153,10 @@ jobs:
         run: npm run test:e2e:live
         env:
           LIVE_URL: ${{ needs.deploy.outputs.page_url }}
+          EXPECT_ONLINE: ${{ vars.VITE_FIREBASE_PROJECT_ID != '' && '1' || '' }}
+      - name: Play one round online on the live site (opt-in)
+        if: github.event_name == 'workflow_dispatch' && inputs.online_check
+        run: npx playwright test -c playwright.live.config.ts e2e/live/online.spec.ts
+        env:
+          LIVE_URL: ${{ needs.deploy.outputs.page_url }}
+          LIVE_ONLINE: '1'
