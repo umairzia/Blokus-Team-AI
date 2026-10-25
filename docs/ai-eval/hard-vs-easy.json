@@ -1,0 +1,1535 @@
+{
+  "summary": {
+    "a": "hard",
+    "b": "easy",
+    "pairs": 50,
+    "games": 100,
+    "opening": 4,
+    "baseSeed": 30000,
+    "wins": 96,
+    "draws": 0,
+    "losses": 4,
+    "scoreRate": 0.96,
+    "scoreRateCi": [
+      0.9215920008331597,
+      0.9984079991668402
+    ],
+    "meanPairMargin": 28.77,
+    "meanPairMarginCi": [
+      25.450823499721654,
+      32.08917650027834
+    ],
+    "pairWins": 50,
+    "pairLosses": 0,
+    "pairTies": 0,
+    "signTestP": 1.7763568394002489e-15,
+    "winsAsTeam0": "47/50",
+    "winsAsTeam1": "49/50",
+    "avgDecisionMsA": 19.76279021919728,
+    "maxDecisionMsAny": 110.31281700000005,
+    "timeouts": 0,
+    "wallSeconds": 19.290306209
+  },
+  "results": [
+    {
+      "pair": 0,
+      "seed": 30000,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": 6,
+          "bScore": -42,
+          "margin": 48,
+          "outcome": "win",
+          "aThinkMs": 855.1927699999994,
+          "aMaxMs": 110.31281700000005,
+          "aDecisions": 37,
+          "plies": 72,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -24,
+          "bScore": -56,
+          "margin": 32,
+          "outcome": "win",
+          "aThinkMs": 628.0701859999999,
+          "aMaxMs": 39.99939100000006,
+          "aDecisions": 34,
+          "plies": 64,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 1,
+      "seed": 30001,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -8,
+          "bScore": -47,
+          "margin": 39,
+          "outcome": "win",
+          "aThinkMs": 899.8236720000004,
+          "aMaxMs": 82.26971800000001,
+          "aDecisions": 38,
+          "plies": 70,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -14,
+          "bScore": -33,
+          "margin": 19,
+          "outcome": "win",
+          "aThinkMs": 760.018875999999,
+          "aMaxMs": 43.83175300000016,
+          "aDecisions": 36,
+          "plies": 72,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 2,
+      "seed": 30002,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -9,
+          "bScore": -51,
+          "margin": 42,
+          "outcome": "win",
+          "aThinkMs": 826.315204,
+          "aMaxMs": 91.80443200000002,
+          "aDecisions": 38,
+          "plies": 70,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -7,
+          "bScore": -51,
+          "margin": 44,
+          "outcome": "win",
+          "aThinkMs": 607.166670999999,
+          "aMaxMs": 45.96785399999999,
+          "aDecisions": 35,
+          "plies": 67,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 3,
+      "seed": 30003,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -3,
+          "bScore": -38,
+          "margin": 35,
+          "outcome": "win",
+          "aThinkMs": 899.7570920000003,
+          "aMaxMs": 96.22952800000002,
+          "aDecisions": 34,
+          "plies": 68,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -13,
+          "bScore": -53,
+          "margin": 40,
+          "outcome": "win",
+          "aThinkMs": 693.0455869999996,
+          "aMaxMs": 49.74596500000007,
+          "aDecisions": 37,
+          "plies": 68,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 4,
+      "seed": 30004,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -26,
+          "bScore": -30,
+          "margin": 4,
+          "outcome": "win",
+          "aThinkMs": 670.2235490000019,
+          "aMaxMs": 48.336161000000175,
+          "aDecisions": 33,
+          "plies": 69,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -10,
+          "bScore": -35,
+          "margin": 25,
+          "outcome": "win",
+          "aThinkMs": 672.1817059999994,
+          "aMaxMs": 45.17836299999999,
+          "aDecisions": 38,
+          "plies": 73,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 5,
+      "seed": 30005,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -12,
+          "bScore": -37,
+          "margin": 25,
+          "outcome": "win",
+          "aThinkMs": 686.7253529999982,
+          "aMaxMs": 48.395847,
+          "aDecisions": 37,
+          "plies": 72,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -25,
+          "bScore": -55,
+          "margin": 30,
+          "outcome": "win",
+          "aThinkMs": 633.4493160000002,
+          "aMaxMs": 47.100226999999904,
+          "aDecisions": 34,
+          "plies": 65,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 6,
+      "seed": 30006,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -20,
+          "bScore": -19,
+          "margin": -1,
+          "outcome": "loss",
+          "aThinkMs": 713.3765229999992,
+          "aMaxMs": 45.94988999999987,
+          "aDecisions": 35,
+          "plies": 74,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -9,
+          "bScore": -36,
+          "margin": 27,
+          "outcome": "win",
+          "aThinkMs": 775.1280390000002,
+          "aMaxMs": 44.887564999999995,
+          "aDecisions": 38,
+          "plies": 73,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 7,
+      "seed": 30007,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -3,
+          "bScore": -63,
+          "margin": 60,
+          "outcome": "win",
+          "aThinkMs": 688.0491080000011,
+          "aMaxMs": 48.100171000000046,
+          "aDecisions": 35,
+          "plies": 63,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -22,
+          "bScore": -48,
+          "margin": 26,
+          "outcome": "win",
+          "aThinkMs": 696.9783200000015,
+          "aMaxMs": 48.96518500000002,
+          "aDecisions": 35,
+          "plies": 67,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 8,
+      "seed": 30008,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": 16,
+          "bScore": -50,
+          "margin": 66,
+          "outcome": "win",
+          "aThinkMs": 679.8938519999992,
+          "aMaxMs": 43.413694000000305,
+          "aDecisions": 39,
+          "plies": 71,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -17,
+          "bScore": -37,
+          "margin": 20,
+          "outcome": "win",
+          "aThinkMs": 687.5313599999981,
+          "aMaxMs": 45.29694800000016,
+          "aDecisions": 36,
+          "plies": 71,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 9,
+      "seed": 30009,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -19,
+          "bScore": -35,
+          "margin": 16,
+          "outcome": "win",
+          "aThinkMs": 709.6971310000004,
+          "aMaxMs": 56.63601100000005,
+          "aDecisions": 35,
+          "plies": 70,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -24,
+          "bScore": -45,
+          "margin": 21,
+          "outcome": "win",
+          "aThinkMs": 736.5999519999987,
+          "aMaxMs": 47.91914900000029,
+          "aDecisions": 34,
+          "plies": 67,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 10,
+      "seed": 30010,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": 16,
+          "bScore": -60,
+          "margin": 76,
+          "outcome": "win",
+          "aThinkMs": 767.6740010000026,
+          "aMaxMs": 46.55923100000018,
+          "aDecisions": 39,
+          "plies": 69,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -16,
+          "bScore": -41,
+          "margin": 25,
+          "outcome": "win",
+          "aThinkMs": 717.012729,
+          "aMaxMs": 41.467994000000544,
+          "aDecisions": 36,
+          "plies": 70,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 11,
+      "seed": 30011,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -32,
+          "bScore": -36,
+          "margin": 4,
+          "outcome": "win",
+          "aThinkMs": 698.4180060000003,
+          "aMaxMs": 46.44192599999997,
+          "aDecisions": 32,
+          "plies": 67,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -2,
+          "bScore": -49,
+          "margin": 47,
+          "outcome": "win",
+          "aThinkMs": 695.5217279999979,
+          "aMaxMs": 47.56756399999995,
+          "aDecisions": 36,
+          "plies": 67,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 12,
+      "seed": 30012,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -22,
+          "bScore": -40,
+          "margin": 18,
+          "outcome": "win",
+          "aThinkMs": 762.3113539999977,
+          "aMaxMs": 48.96649100000013,
+          "aDecisions": 35,
+          "plies": 69,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -20,
+          "bScore": -48,
+          "margin": 28,
+          "outcome": "win",
+          "aThinkMs": 700.6387880000011,
+          "aMaxMs": 49.703701999999794,
+          "aDecisions": 35,
+          "plies": 67,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 13,
+      "seed": 30013,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -27,
+          "bScore": -38,
+          "margin": 11,
+          "outcome": "win",
+          "aThinkMs": 637.002892999999,
+          "aMaxMs": 47.294292000000496,
+          "aDecisions": 33,
+          "plies": 67,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": 12,
+          "bScore": -45,
+          "margin": 57,
+          "outcome": "win",
+          "aThinkMs": 671.4119869999968,
+          "aMaxMs": 48.82002300000022,
+          "aDecisions": 38,
+          "plies": 72,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 14,
+      "seed": 30014,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": 7,
+          "bScore": -47,
+          "margin": 54,
+          "outcome": "win",
+          "aThinkMs": 706.6497070000014,
+          "aMaxMs": 43.32645700000012,
+          "aDecisions": 37,
+          "plies": 70,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": 11,
+          "bScore": -49,
+          "margin": 60,
+          "outcome": "win",
+          "aThinkMs": 748.0808959999986,
+          "aMaxMs": 46.34976199999983,
+          "aDecisions": 38,
+          "plies": 70,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 15,
+      "seed": 30015,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -13,
+          "bScore": -49,
+          "margin": 36,
+          "outcome": "win",
+          "aThinkMs": 748.4536059999964,
+          "aMaxMs": 48.78776900000048,
+          "aDecisions": 37,
+          "plies": 69,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -18,
+          "bScore": -35,
+          "margin": 17,
+          "outcome": "win",
+          "aThinkMs": 701.7501509999975,
+          "aMaxMs": 43.04605199999969,
+          "aDecisions": 36,
+          "plies": 71,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 16,
+      "seed": 30016,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -15,
+          "bScore": -34,
+          "margin": 19,
+          "outcome": "win",
+          "aThinkMs": 799.4415059999992,
+          "aMaxMs": 51.129761000000144,
+          "aDecisions": 36,
+          "plies": 71,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -34,
+          "bScore": -33,
+          "margin": -1,
+          "outcome": "loss",
+          "aThinkMs": 731.5904709999968,
+          "aMaxMs": 45.91778499999964,
+          "aDecisions": 32,
+          "plies": 68,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 17,
+      "seed": 30017,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -15,
+          "bScore": -54,
+          "margin": 39,
+          "outcome": "win",
+          "aThinkMs": 738.6313159999972,
+          "aMaxMs": 51.921362000000045,
+          "aDecisions": 36,
+          "plies": 66,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -19,
+          "bScore": -38,
+          "margin": 19,
+          "outcome": "win",
+          "aThinkMs": 742.3304029999999,
+          "aMaxMs": 55.498061000000234,
+          "aDecisions": 35,
+          "plies": 69,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 18,
+      "seed": 30018,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -29,
+          "bScore": -41,
+          "margin": 12,
+          "outcome": "win",
+          "aThinkMs": 669.0065870000026,
+          "aMaxMs": 53.69322000000011,
+          "aDecisions": 33,
+          "plies": 67,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -13,
+          "bScore": -46,
+          "margin": 33,
+          "outcome": "win",
+          "aThinkMs": 658.6724209999984,
+          "aMaxMs": 41.114369999999326,
+          "aDecisions": 37,
+          "plies": 70,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 19,
+      "seed": 30019,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -26,
+          "bScore": -43,
+          "margin": 17,
+          "outcome": "win",
+          "aThinkMs": 678.1616899999963,
+          "aMaxMs": 43.88815499999964,
+          "aDecisions": 33,
+          "plies": 66,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -13,
+          "bScore": -38,
+          "margin": 25,
+          "outcome": "win",
+          "aThinkMs": 777.1605539999982,
+          "aMaxMs": 46.764648999999736,
+          "aDecisions": 37,
+          "plies": 72,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 20,
+      "seed": 30020,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -16,
+          "bScore": -29,
+          "margin": 13,
+          "outcome": "win",
+          "aThinkMs": 807.0991489999951,
+          "aMaxMs": 54.58801699999913,
+          "aDecisions": 36,
+          "plies": 73,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": 16,
+          "bScore": -24,
+          "margin": 40,
+          "outcome": "win",
+          "aThinkMs": 849.7166779999934,
+          "aMaxMs": 59.312127999999575,
+          "aDecisions": 39,
+          "plies": 77,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 21,
+      "seed": 30021,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -17,
+          "bScore": -53,
+          "margin": 36,
+          "outcome": "win",
+          "aThinkMs": 710.1526890000005,
+          "aMaxMs": 52.62562400000024,
+          "aDecisions": 36,
+          "plies": 67,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -8,
+          "bScore": -27,
+          "margin": 19,
+          "outcome": "win",
+          "aThinkMs": 788.3979800000016,
+          "aMaxMs": 51.200550999999905,
+          "aDecisions": 38,
+          "plies": 75,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 22,
+      "seed": 30022,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": 0,
+          "bScore": -52,
+          "margin": 52,
+          "outcome": "win",
+          "aThinkMs": 735.6719180000018,
+          "aMaxMs": 45.559204999999565,
+          "aDecisions": 36,
+          "plies": 67,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -13,
+          "bScore": -38,
+          "margin": 25,
+          "outcome": "win",
+          "aThinkMs": 741.5130930000032,
+          "aMaxMs": 55.845525999999154,
+          "aDecisions": 37,
+          "plies": 72,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 23,
+      "seed": 30023,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -21,
+          "bScore": -46,
+          "margin": 25,
+          "outcome": "win",
+          "aThinkMs": 759.6881630000062,
+          "aMaxMs": 62.16174099999989,
+          "aDecisions": 35,
+          "plies": 68,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -18,
+          "bScore": -40,
+          "margin": 22,
+          "outcome": "win",
+          "aThinkMs": 702.2670919999964,
+          "aMaxMs": 43.88414399999965,
+          "aDecisions": 36,
+          "plies": 70,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 24,
+      "seed": 30024,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -28,
+          "bScore": -25,
+          "margin": -3,
+          "outcome": "loss",
+          "aThinkMs": 739.100031,
+          "aMaxMs": 48.00265099999888,
+          "aDecisions": 33,
+          "plies": 71,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -8,
+          "bScore": -46,
+          "margin": 38,
+          "outcome": "win",
+          "aThinkMs": 661.3210459999973,
+          "aMaxMs": 44.47342799999933,
+          "aDecisions": 38,
+          "plies": 70,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 25,
+      "seed": 30025,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -23,
+          "bScore": -41,
+          "margin": 18,
+          "outcome": "win",
+          "aThinkMs": 699.3843469999956,
+          "aMaxMs": 46.58585900000071,
+          "aDecisions": 34,
+          "plies": 68,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -19,
+          "bScore": -36,
+          "margin": 17,
+          "outcome": "win",
+          "aThinkMs": 736.7716450000025,
+          "aMaxMs": 47.29492399999981,
+          "aDecisions": 35,
+          "plies": 69,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 26,
+      "seed": 30026,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -17,
+          "bScore": -42,
+          "margin": 25,
+          "outcome": "win",
+          "aThinkMs": 744.1426379999994,
+          "aMaxMs": 57.38797800000066,
+          "aDecisions": 36,
+          "plies": 70,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": 7,
+          "bScore": -61,
+          "margin": 68,
+          "outcome": "win",
+          "aThinkMs": 606.1725129999959,
+          "aMaxMs": 43.72221200000058,
+          "aDecisions": 36,
+          "plies": 66,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 27,
+      "seed": 30027,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -24,
+          "bScore": -56,
+          "margin": 32,
+          "outcome": "win",
+          "aThinkMs": 649.6214170000003,
+          "aMaxMs": 41.51098599999932,
+          "aDecisions": 34,
+          "plies": 65,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -16,
+          "bScore": -57,
+          "margin": 41,
+          "outcome": "win",
+          "aThinkMs": 690.7205349999895,
+          "aMaxMs": 46.19260899999972,
+          "aDecisions": 36,
+          "plies": 66,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 28,
+      "seed": 30028,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -6,
+          "bScore": -50,
+          "margin": 44,
+          "outcome": "win",
+          "aThinkMs": 620.2022000000052,
+          "aMaxMs": 40.769115000000966,
+          "aDecisions": 38,
+          "plies": 70,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -10,
+          "bScore": -56,
+          "margin": 46,
+          "outcome": "win",
+          "aThinkMs": 633.4877320000014,
+          "aMaxMs": 44.30127999999968,
+          "aDecisions": 38,
+          "plies": 69,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 29,
+      "seed": 30029,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -19,
+          "bScore": -35,
+          "margin": 16,
+          "outcome": "win",
+          "aThinkMs": 765.3460220000052,
+          "aMaxMs": 48.068231999999625,
+          "aDecisions": 36,
+          "plies": 71,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -13,
+          "bScore": -34,
+          "margin": 21,
+          "outcome": "win",
+          "aThinkMs": 735.9339580000033,
+          "aMaxMs": 47.229277000000366,
+          "aDecisions": 37,
+          "plies": 73,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 30,
+      "seed": 30030,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -24,
+          "bScore": -57,
+          "margin": 33,
+          "outcome": "win",
+          "aThinkMs": 633.9279590000042,
+          "aMaxMs": 40.88882000000012,
+          "aDecisions": 34,
+          "plies": 64,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -14,
+          "bScore": -33,
+          "margin": 19,
+          "outcome": "win",
+          "aThinkMs": 694.275350999993,
+          "aMaxMs": 46.473111999999674,
+          "aDecisions": 37,
+          "plies": 73,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 31,
+      "seed": 30031,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -20,
+          "bScore": -43,
+          "margin": 23,
+          "outcome": "win",
+          "aThinkMs": 624.3824090000016,
+          "aMaxMs": 46.245122000000265,
+          "aDecisions": 35,
+          "plies": 69,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": 0,
+          "bScore": -48,
+          "margin": 48,
+          "outcome": "win",
+          "aThinkMs": 667.6799839999967,
+          "aMaxMs": 47.588386000001265,
+          "aDecisions": 36,
+          "plies": 68,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 32,
+      "seed": 30032,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -17,
+          "bScore": -47,
+          "margin": 30,
+          "outcome": "win",
+          "aThinkMs": 669.299243999998,
+          "aMaxMs": 44.889649000000645,
+          "aDecisions": 36,
+          "plies": 68,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": 3,
+          "bScore": -47,
+          "margin": 50,
+          "outcome": "win",
+          "aThinkMs": 681.8391819999979,
+          "aMaxMs": 58.23485199999959,
+          "aDecisions": 37,
+          "plies": 69,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 33,
+      "seed": 30033,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -30,
+          "bScore": -40,
+          "margin": 10,
+          "outcome": "win",
+          "aThinkMs": 656.1166390000053,
+          "aMaxMs": 48.54072500000075,
+          "aDecisions": 32,
+          "plies": 67,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": 11,
+          "bScore": -49,
+          "margin": 60,
+          "outcome": "win",
+          "aThinkMs": 717.6997989999945,
+          "aMaxMs": 52.31929400000081,
+          "aDecisions": 38,
+          "plies": 70,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 34,
+      "seed": 30034,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -32,
+          "bScore": -38,
+          "margin": 6,
+          "outcome": "win",
+          "aThinkMs": 727.3318829999953,
+          "aMaxMs": 50.00252399999954,
+          "aDecisions": 32,
+          "plies": 67,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": 6,
+          "bScore": -62,
+          "margin": 68,
+          "outcome": "win",
+          "aThinkMs": 600.6967279999972,
+          "aMaxMs": 43.54564399999981,
+          "aDecisions": 37,
+          "plies": 66,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 35,
+      "seed": 30035,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -21,
+          "bScore": -31,
+          "margin": 10,
+          "outcome": "win",
+          "aThinkMs": 728.4270400000041,
+          "aMaxMs": 43.382950000001074,
+          "aDecisions": 35,
+          "plies": 71,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": 16,
+          "bScore": -53,
+          "margin": 69,
+          "outcome": "win",
+          "aThinkMs": 681.937337000003,
+          "aMaxMs": 42.76006899999993,
+          "aDecisions": 39,
+          "plies": 70,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 36,
+      "seed": 30036,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -28,
+          "bScore": -38,
+          "margin": 10,
+          "outcome": "win",
+          "aThinkMs": 692.1971659999945,
+          "aMaxMs": 46.776004000001194,
+          "aDecisions": 33,
+          "plies": 68,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -31,
+          "bScore": -59,
+          "margin": 28,
+          "outcome": "win",
+          "aThinkMs": 642.8591920000108,
+          "aMaxMs": 50.986080000000584,
+          "aDecisions": 32,
+          "plies": 60,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 37,
+      "seed": 30037,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -26,
+          "bScore": -24,
+          "margin": -2,
+          "outcome": "loss",
+          "aThinkMs": 678.462577000002,
+          "aMaxMs": 44.88975500000015,
+          "aDecisions": 34,
+          "plies": 72,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -19,
+          "bScore": -34,
+          "margin": 15,
+          "outcome": "win",
+          "aThinkMs": 722.833810999995,
+          "aMaxMs": 50.938466999999946,
+          "aDecisions": 35,
+          "plies": 71,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 38,
+      "seed": 30038,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": 16,
+          "bScore": -67,
+          "margin": 83,
+          "outcome": "win",
+          "aThinkMs": 659.7174530000048,
+          "aMaxMs": 48.003608999999415,
+          "aDecisions": 39,
+          "plies": 67,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -24,
+          "bScore": -39,
+          "margin": 15,
+          "outcome": "win",
+          "aThinkMs": 677.1206940000084,
+          "aMaxMs": 48.62129200000163,
+          "aDecisions": 34,
+          "plies": 69,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 39,
+      "seed": 30039,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -13,
+          "bScore": -55,
+          "margin": 42,
+          "outcome": "win",
+          "aThinkMs": 662.8167840000024,
+          "aMaxMs": 46.261813999999504,
+          "aDecisions": 37,
+          "plies": 67,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -9,
+          "bScore": -50,
+          "margin": 41,
+          "outcome": "win",
+          "aThinkMs": 702.1131019999902,
+          "aMaxMs": 55.67108399999961,
+          "aDecisions": 38,
+          "plies": 70,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 40,
+      "seed": 30040,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -21,
+          "bScore": -41,
+          "margin": 20,
+          "outcome": "win",
+          "aThinkMs": 690.1428689999957,
+          "aMaxMs": 45.453010999999606,
+          "aDecisions": 35,
+          "plies": 69,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -18,
+          "bScore": -41,
+          "margin": 23,
+          "outcome": "win",
+          "aThinkMs": 738.2003059999952,
+          "aMaxMs": 49.30256900000131,
+          "aDecisions": 36,
+          "plies": 70,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 41,
+      "seed": 30041,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -14,
+          "bScore": -33,
+          "margin": 19,
+          "outcome": "win",
+          "aThinkMs": 677.6857280000022,
+          "aMaxMs": 44.466865000000325,
+          "aDecisions": 36,
+          "plies": 71,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -20,
+          "bScore": -46,
+          "margin": 26,
+          "outcome": "win",
+          "aThinkMs": 659.4454690000057,
+          "aMaxMs": 57.24843099999998,
+          "aDecisions": 35,
+          "plies": 67,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 42,
+      "seed": 30042,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -29,
+          "bScore": -49,
+          "margin": 20,
+          "outcome": "win",
+          "aThinkMs": 684.7755179999931,
+          "aMaxMs": 60.80307499999981,
+          "aDecisions": 33,
+          "plies": 64,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -25,
+          "bScore": -48,
+          "margin": 23,
+          "outcome": "win",
+          "aThinkMs": 669.5549590000101,
+          "aMaxMs": 44.300530000000435,
+          "aDecisions": 33,
+          "plies": 65,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 43,
+      "seed": 30043,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -12,
+          "bScore": -49,
+          "margin": 37,
+          "outcome": "win",
+          "aThinkMs": 679.7120459999969,
+          "aMaxMs": 48.112866999999824,
+          "aDecisions": 37,
+          "plies": 69,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -17,
+          "bScore": -42,
+          "margin": 25,
+          "outcome": "win",
+          "aThinkMs": 690.5865479999866,
+          "aMaxMs": 42.2757649999985,
+          "aDecisions": 36,
+          "plies": 70,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 44,
+      "seed": 30044,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -13,
+          "bScore": -33,
+          "margin": 20,
+          "outcome": "win",
+          "aThinkMs": 758.1449209999919,
+          "aMaxMs": 52.14583599999969,
+          "aDecisions": 37,
+          "plies": 73,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -32,
+          "bScore": -35,
+          "margin": 3,
+          "outcome": "win",
+          "aThinkMs": 702.4438310000005,
+          "aMaxMs": 49.591653999999835,
+          "aDecisions": 32,
+          "plies": 67,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 45,
+      "seed": 30045,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -22,
+          "bScore": -46,
+          "margin": 24,
+          "outcome": "win",
+          "aThinkMs": 701.4940860000061,
+          "aMaxMs": 54.86085699999967,
+          "aDecisions": 35,
+          "plies": 68,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -25,
+          "bScore": -31,
+          "margin": 6,
+          "outcome": "win",
+          "aThinkMs": 672.170176999989,
+          "aMaxMs": 47.0340099999994,
+          "aDecisions": 34,
+          "plies": 71,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 46,
+      "seed": 30046,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -27,
+          "bScore": -31,
+          "margin": 4,
+          "outcome": "win",
+          "aThinkMs": 632.0767829999932,
+          "aMaxMs": 39.58313800000178,
+          "aDecisions": 34,
+          "plies": 70,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -23,
+          "bScore": -42,
+          "margin": 19,
+          "outcome": "win",
+          "aThinkMs": 673.2641139999978,
+          "aMaxMs": 48.11297800000102,
+          "aDecisions": 34,
+          "plies": 68,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 47,
+      "seed": 30047,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -12,
+          "bScore": -58,
+          "margin": 46,
+          "outcome": "win",
+          "aThinkMs": 724.0244259999963,
+          "aMaxMs": 52.336373999998614,
+          "aDecisions": 37,
+          "plies": 67,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -18,
+          "bScore": -36,
+          "margin": 18,
+          "outcome": "win",
+          "aThinkMs": 679.529137000005,
+          "aMaxMs": 46.96115099999952,
+          "aDecisions": 36,
+          "plies": 71,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 48,
+      "seed": 30048,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -20,
+          "bScore": -34,
+          "margin": 14,
+          "outcome": "win",
+          "aThinkMs": 683.5158280000069,
+          "aMaxMs": 54.69698300000164,
+          "aDecisions": 35,
+          "plies": 71,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -17,
+          "bScore": -39,
+          "margin": 22,
+          "outcome": "win",
+          "aThinkMs": 642.3740929999913,
+          "aMaxMs": 46.38459900000089,
+          "aDecisions": 36,
+          "plies": 70,
+          "timeouts": 0
+        }
+      ]
+    },
+    {
+      "pair": 49,
+      "seed": 30049,
+      "games": [
+        {
+          "aTeam": 0,
+          "aScore": -20,
+          "bScore": -56,
+          "margin": 36,
+          "outcome": "win",
+          "aThinkMs": 608.2434079999875,
+          "aMaxMs": 54.846456999999646,
+          "aDecisions": 35,
+          "plies": 66,
+          "timeouts": 0
+        },
+        {
+          "aTeam": 1,
+          "aScore": -20,
+          "bScore": -25,
+          "margin": 5,
+          "outcome": "win",
+          "aThinkMs": 679.8470630000011,
+          "aMaxMs": 42.88103599999886,
+          "aDecisions": 34,
+          "plies": 72,
+          "timeouts": 0
+        }
+      ]
+    }
+  ]
+}

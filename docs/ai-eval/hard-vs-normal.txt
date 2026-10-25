@@ -1,0 +1,33 @@
+{
+  "a": "hard",
+  "b": "normal",
+  "pairs": 100,
+  "games": 200,
+  "opening": 4,
+  "baseSeed": 10000,
+  "wins": 175,
+  "draws": 4,
+  "losses": 21,
+  "scoreRate": 0.885,
+  "scoreRateCi": [
+    0.8407858144935362,
+    0.9292141855064638
+  ],
+  "meanPairMargin": 16.33,
+  "meanPairMarginCi": [
+    14.091343147638238,
+    18.56865685236176
+  ],
+  "pairWins": 95,
+  "pairLosses": 5,
+  "pairTies": 0,
+  "signTestP": 1.2523245125385327e-22,
+  "winsAsTeam0": "87/100",
+  "winsAsTeam1": "88/100",
+  "avgDecisionMsA": 19.890653952380966,
+  "maxDecisionMsAny": 120.2030319999999,
+  "timeouts": 0,
+  "wallSeconds": 36.501245804
+}
+
+hard vs normal: 175W 4D 21L over 200 games (score rate 88.5% ± 4.4); mean paired margin 16.33 [14.09, 18.57]; pairs won/lost 95/5, sign test p = 1.25e-22

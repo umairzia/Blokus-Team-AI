@@ -1,0 +1,52 @@
+{
+  "name": "blokus-team-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Browser Blokus for two humans online against two AI players, synced through Firebase.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:emulator": "vite build --mode emulator --outDir dist-emulator",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "eslint .",
+    "test": "vitest run --project unit",
+    "test:unit": "vitest run --project unit",
+    "test:ai": "vitest run --project ai",
+    "test:network": "vitest run --project network",
+    "test:firebase": "firebase emulators:exec --config firebase.test.json --only auth,database --project demo-blokus \"vitest run --project firebase\"",
+    "test:e2e": "playwright test",
+    "test:e2e:emulator": "firebase emulators:exec --config firebase.test.json --only auth,database --project demo-blokus \"playwright test -c playwright.emulator.config.ts\"",
+    "test:e2e:live": "playwright test -c playwright.live.config.ts",
+    "check:dist": "node scripts/check-dist.mjs dist",
+    "ai:eval": "tsx scripts/ai-eval.ts",
+    "test:all": "npm run typecheck && npm run lint && npm run test:unit && npm run test:ai && npm run test:network && npm run test:firebase && npm run build && npm run check:dist && npm run build:emulator && npm run check:dist:emulator && npm run test:e2e && npm run test:e2e:emulator",
+    "check:dist:emulator": "node scripts/check-dist.mjs dist-emulator"
+  },
+  "dependencies": {
+    "firebase": "12.19.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@firebase/rules-unit-testing": "5.0.2",
+    "@playwright/test": "1.63.0",
+    "@types/node": "22.20.5",
+    "eslint": "10.12.0",
+    "fast-check": "4.10.2",
+    "firebase-tools": "15.32.1",
+    "globals": "17.13.0",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.1",
+    "vite": "7.3.7",
+    "vitest": "4.0.18"
+  },
+  "overrides": {
+    "@grpc/grpc-js": "1.14.6"
+  }
+}

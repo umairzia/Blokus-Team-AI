@@ -1,0 +1,33 @@
+{
+  "a": "normal",
+  "b": "easy",
+  "pairs": 100,
+  "games": 200,
+  "opening": 4,
+  "baseSeed": 20000,
+  "wins": 156,
+  "draws": 6,
+  "losses": 38,
+  "scoreRate": 0.795,
+  "scoreRateCi": [
+    0.7390498096517983,
+    0.8509501903482017
+  ],
+  "meanPairMargin": 10.885,
+  "meanPairMarginCi": [
+    8.717204995807487,
+    13.052795004192513
+  ],
+  "pairWins": 87,
+  "pairLosses": 10,
+  "pairTies": 3,
+  "signTestP": 1.7877527700123057e-16,
+  "winsAsTeam0": "84/100",
+  "winsAsTeam1": "72/100",
+  "avgDecisionMsA": 0.9478176828265008,
+  "maxDecisionMsAny": 23.407256000000018,
+  "timeouts": 0,
+  "wallSeconds": 3.9403058960000004
+}
+
+normal vs easy: 156W 6D 38L over 200 games (score rate 79.5% ± 5.6); mean paired margin 10.88 [8.72, 13.05]; pairs won/lost 87/10, sign test p = 1.79e-16

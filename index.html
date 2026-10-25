@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Blokus Team AI – you and a friend against two AI players</title>
+    <meta
+      name="description"
+      content="Play Blokus in your browser: two friends on different devices team up against two AI players. Free, no accounts, no ads."
+    />
+    <meta name="theme-color" content="#1f2a44" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to the game</a>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Blokus Team AI, home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="brand-text">Blokus <b>Team AI</b></span>
+      </a>
+      <button id="room-chip" class="room-chip" type="button" hidden aria-label="Copy the invitation link">
+        Room <b id="room-chip-code"></b>
+      </button>
+      <span id="conn" class="conn conn-local" role="status" aria-live="polite">
+        <span class="conn-dot" aria-hidden="true"></span><span id="conn-text">Offline</span>
+      </span>
+      <button id="btn-help" class="icon-btn" type="button" aria-haspopup="dialog" aria-label="Rules and help">?</button>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <!-- Home: create, join or practise -->
+      <section id="screen-home" class="screen" aria-labelledby="home-title">
+        <div class="hero">
+          <h1 id="home-title">Blokus, two humans against two AI</h1>
+          <p class="lead">
+            You and a friend are <b class="team-human">Team Human</b> (blue and red). Two computer players are
+            <b class="team-ai">Team AI</b> (yellow and green). Fit your pieces on the board corner to corner; the team
+            with the fewest squares left over wins.
+          </p>
+        </div>
+
+        <div id="home-msg" class="notice" role="alert" hidden></div>
+
+        <div class="home-grid">
+          <div class="card card-online">
+            <h2>Play online with a friend</h2>
+            <div id="online-setup" class="setup-note" hidden>
+              <p><b>Online play is not set up on this copy of the game yet.</b></p>
+              <p>
+                The site owner needs to create a free Firebase project and add its web settings to the build. The
+                steps are in <code>docs/FIREBASE_SETUP.md</code>. Until then you can still play offline practice below.
+              </p>
+              <p id="online-setup-detail" class="small"></p>
+            </div>
+            <div id="online-forms">
+              <label class="field"
+                >Your name
+                <input id="name" type="text" maxlength="24" autocomplete="nickname" autocapitalize="words" placeholder="e.g. Ayesha" />
+              </label>
+              <div id="resume-box" class="resume" hidden>
+                <button id="btn-resume" class="btn btn-primary" type="button">Continue room <span id="resume-code"></span></button>
+              </div>
+              <div class="choice">
+                <h3>Start a room</h3>
+                <label class="field field-inline"
+                  >AI level
+                  <select id="level">
+                    <option value="easy">Easy</option>
+                    <option value="normal" selected>Normal</option>
+                    <option value="hard">Hard</option>
+                  </select>
+                </label>
+                <button id="btn-create" class="btn btn-primary" type="button">Create room</button>
+              </div>
+              <div class="choice">
+                <h3>Join a room</h3>
+                <form id="join-form" class="join-row">
+                  <label class="sr-only" for="join-code">Room code</label>
+                  <input
+                    id="join-code"
+                    type="text"
+                    inputmode="text"
+                    autocomplete="off"
+                    autocapitalize="characters"
+                    spellcheck="false"
+                    maxlength="64"
+                    placeholder="Room code, e.g. K7PQ2M"
+                  />
+                  <button id="btn-join" class="btn" type="submit">Join</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-practice">
+            <h2>Offline practice</h2>
+            <p>
+              Both human colours on <b>this device</b> against the two AI players, with no network at all. Good for
+              learning the rules. <em>This is not online play.</em>
+            </p>
+            <label class="field field-inline"
+              >AI level
+              <select id="practice-level">
+                <option value="easy">Easy</option>
+                <option value="normal" selected>Normal</option>
+                <option value="hard">Hard</option>
+              </select>
+            </label>
+            <button id="btn-practice" class="btn" type="button">Start practice game</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lobby: waiting for the partner -->
+      <section id="screen-lobby" class="screen" aria-labelledby="lobby-title" hidden>
+        <div class="card lobby-card">
+          <h1 id="lobby-title">Room <span id="lobby-code" class="code"></span></h1>
+          <p id="lobby-lead" class="lead"></p>
+          <div class="share-row">
+            <input id="share-link" type="text" readonly aria-label="Invitation link" />
+            <button id="btn-copy" class="btn btn-primary" type="button">Copy invitation link</button>
+          </div>
+          <ul id="lobby-seats" class="lobby-seats" aria-label="Seats"></ul>
+          <div id="lobby-host-controls" class="lobby-controls" hidden>
+            <label class="field field-inline"
+              >AI level
+              <select id="lobby-level">
+                <option value="easy">Easy</option>
+                <option value="normal">Normal</option>
+                <option value="hard">Hard</option>
+              </select>
+            </label>
+            <button id="btn-start" class="btn btn-primary" type="button" disabled>Start game</button>
+          </div>
+          <p id="lobby-wait" class="muted" role="status" aria-live="polite"></p>
+          <div class="lobby-actions">
+            <button id="btn-free-seat" class="btn btn-quiet" type="button" hidden>Free partner's seat</button>
+            <button id="btn-lobby-leave" class="btn btn-quiet" type="button">Leave room</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- The game -->
+      <section id="screen-game" class="screen" aria-label="Game" hidden>
+        <div id="mode-banner" class="mode-banner" hidden>Offline practice on this device: not online play.</div>
+        <div id="status" class="status" role="status" aria-live="polite">
+          <span id="status-dot" class="status-dot" aria-hidden="true"></span>
+          <span id="status-text"></span>
+          <span id="thinking" class="thinking" hidden aria-hidden="true"><i></i><i></i><i></i></span>
+          <span id="status-score" class="status-score"></span>
+        </div>
+        <div id="notice" class="notice" role="alert" hidden></div>
+        <div class="game-layout">
+          <aside class="panel seats-panel" aria-label="Players and scores">
+            <div class="team-scores" id="team-scores"></div>
+            <ol id="seats" class="seats"></ol>
+          </aside>
+
+          <div class="board-col">
+            <div
+              id="board"
+              class="board"
+              tabindex="0"
+              role="application"
+              aria-label="Board, 20 by 20 squares. Use the arrow keys to move, R to rotate, F to flip, Enter to place, Escape to cancel."
+              aria-describedby="board-live"
+            ></div>
+            <p id="board-live" class="sr-only" aria-live="polite"></p>
+            <div class="controls" role="toolbar" aria-label="Piece controls">
+              <button id="btn-rotate" class="btn btn-tool" type="button" title="Rotate (R)"><span aria-hidden="true">⟳</span> Rotate</button>
+              <button id="btn-flip" class="btn btn-tool" type="button" title="Flip (F)"><span aria-hidden="true">⇋</span> Flip</button>
+              <button id="btn-hint" class="btn btn-tool" type="button" aria-pressed="false" title="Show where the piece fits (H)">
+                <span aria-hidden="true">◎</span> Fits
+              </button>
+              <button id="btn-suggest" class="btn btn-tool" type="button" title="Suggest a move (S)"><span aria-hidden="true">✦</span> Suggest</button>
+              <button id="btn-cancel" class="btn btn-tool" type="button" title="Cancel (Esc)"><span aria-hidden="true">✕</span> Cancel</button>
+              <button id="btn-place" class="btn btn-primary btn-tool" type="button" title="Place (Enter)" disabled>
+                <span aria-hidden="true">✓</span> Place
+              </button>
+              <button id="btn-pass" class="btn btn-tool" type="button" hidden>Pass</button>
+            </div>
+          </div>
+
+          <aside class="panel side-panel">
+            <h2 class="panel-title" id="tray-title">Your pieces</h2>
+            <div id="tray" class="tray" role="group" aria-labelledby="tray-title"></div>
+            <details class="log-box" open>
+              <summary>Move history</summary>
+              <ol id="log" class="log" reversed></ol>
+            </details>
+            <div class="game-actions">
+              <label class="toggle"><input id="opt-confirm" type="checkbox" /> Confirm before placing</label>
+              <label class="toggle"><input id="opt-patterns" type="checkbox" /> Colour-blind patterns</label>
+              <button id="btn-new" class="btn btn-quiet" type="button">New game</button>
+              <button id="btn-leave" class="btn btn-quiet" type="button">Leave</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="dlg-over" class="dialog" aria-labelledby="over-title">
+      <h2 id="over-title"></h2>
+      <p id="over-lead" class="lead"></p>
+      <table class="score-table">
+        <thead>
+          <tr>
+            <th scope="col">Player</th>
+            <th scope="col">Pieces left</th>
+            <th scope="col">Squares left</th>
+            <th scope="col">Bonus</th>
+            <th scope="col">Score</th>
+          </tr>
+        </thead>
+        <tbody id="over-body"></tbody>
+      </table>
+      <div class="dialog-actions">
+        <button id="btn-over-new" class="btn btn-primary" type="button">New game</button>
+        <button id="btn-over-close" class="btn" type="button">See the board</button>
+      </div>
+    </dialog>
+
+    <dialog id="dlg-confirm" class="dialog dialog-small" aria-labelledby="confirm-text">
+      <p id="confirm-text"></p>
+      <div class="dialog-actions">
+        <button id="btn-confirm-yes" class="btn btn-primary" type="button">Yes</button>
+        <button id="btn-confirm-no" class="btn" type="button">Cancel</button>
+      </div>
+    </dialog>
+
+    <dialog id="dlg-help" class="dialog" aria-labelledby="help-title">
+      <h2 id="help-title">How to play</h2>
+      <div class="help">
+        <h3>Teams and turns</h3>
+        <ul>
+          <li><b>Team Human</b>: Human 1 (blue, top-left corner) and Human 2 (red, bottom-right corner).</li>
+          <li><b>Team AI</b>: AI 1 (yellow, top-right corner) and AI 2 (green, bottom-left corner).</li>
+          <li>Turns go clockwise and alternate teams: Human 1 → AI 1 → Human 2 → AI 2.</li>
+          <li>Teammates work together, but each plays only their own colour and pieces.</li>
+        </ul>
+        <h3>Placing pieces</h3>
+        <ul>
+          <li>Everyone has the same 21 pieces (1 to 5 squares). Each piece can be played once.</li>
+          <li>Your first piece must cover your starting corner.</li>
+          <li>Every later piece must touch one of your own pieces <b>at a corner</b>, and must <b>not</b> share an edge with your own colour.</li>
+          <li>Touching other colours, along edges or corners, is always allowed. Pieces never overlap and stay on the board.</li>
+          <li>If you cannot place any piece, you are passed automatically for the rest of the game; everyone else carries on.</li>
+          <li>The game ends when nobody can place a piece.</li>
+        </ul>
+        <h3>Scoring</h3>
+        <ul>
+          <li>−1 point for every square left in your unplayed pieces.</li>
+          <li>+15 points if you place all 21 pieces, and +5 more if the last one was the single square.</li>
+          <li>A team's score is the sum of its two players. The higher team score wins; equal scores are a draw.</li>
+        </ul>
+        <h3>Controls</h3>
+        <ul>
+          <li>Pick a piece in the tray, then point at the board: the preview is solid when it fits and striped red when it does not.</li>
+          <li>Click to place. On touch screens, tap to preview, then tap the same spot again or press <b>Place</b>.</li>
+          <li><b>Rotate</b> (R, or Shift+R the other way), <b>Flip</b> (F), <b>Cancel</b> (Esc). <b>Fits</b> (H) marks every spot where the piece fits as it is turned now; <b>Suggest</b> (S) proposes a move.</li>
+          <li>Keyboard: focus the board, move with the arrow keys, Enter to place; [ and ] choose the previous or next piece.</li>
+        </ul>
+        <h3>Online rooms</h3>
+        <ul>
+          <li>One player creates a room and sends the 6-character code or the invitation link. The other opens the link or types the code.</li>
+          <li>No accounts: each browser gets an anonymous id, so a refresh or reconnect brings you back to your seat.</li>
+          <li>The host's browser runs the AI and checks every move. If the host goes offline, the game waits for them.</li>
+        </ul>
+        <p class="small">Blokus is a trademark of Mattel. This is an unofficial fan-made game, not affiliated with or endorsed by Mattel.</p>
+      </div>
+      <div class="dialog-actions">
+        <button id="btn-help-close" class="btn btn-primary" type="button">Close</button>
+      </div>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

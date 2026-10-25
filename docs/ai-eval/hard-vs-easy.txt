@@ -1,0 +1,33 @@
+{
+  "a": "hard",
+  "b": "easy",
+  "pairs": 50,
+  "games": 100,
+  "opening": 4,
+  "baseSeed": 30000,
+  "wins": 96,
+  "draws": 0,
+  "losses": 4,
+  "scoreRate": 0.96,
+  "scoreRateCi": [
+    0.9215920008331597,
+    0.9984079991668402
+  ],
+  "meanPairMargin": 28.77,
+  "meanPairMarginCi": [
+    25.450823499721654,
+    32.08917650027834
+  ],
+  "pairWins": 50,
+  "pairLosses": 0,
+  "pairTies": 0,
+  "signTestP": 1.7763568394002489e-15,
+  "winsAsTeam0": "47/50",
+  "winsAsTeam1": "49/50",
+  "avgDecisionMsA": 19.76279021919728,
+  "maxDecisionMsAny": 110.31281700000005,
+  "timeouts": 0,
+  "wallSeconds": 19.290306209
+}
+
+hard vs easy: 96W 0D 4L over 100 games (score rate 96.0% ± 3.8); mean paired margin 28.77 [25.45, 32.09]; pairs won/lost 50/0, sign test p = 1.78e-15
